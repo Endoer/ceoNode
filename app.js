@@ -11,7 +11,7 @@ http.createServer(function (request, response) {
         if (error) {
 
             response.statusCode = 404;
-            fs.readFile("pages/index.html", function (error, data) {
+            fs.readFile("index.html", function (error, data) {
                 if (error) {
                     response.end("Resourse not found!");
                 }
