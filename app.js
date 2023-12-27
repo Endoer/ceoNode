@@ -5,18 +5,18 @@ http.createServer(function (request, response) {
 
     console.log(`Запрошенный адрес: ${request.url}`);
     // получаем путь после слеша
+    if (request.url === "/") {
+        fs.readFile("index.html", function (error, data) {
+            response.end(data)
+        })
+    }
     const filePath = `pages/${request.url.substring(1)}`;
     fs.readFile(filePath, function (error, data) {
 
         if (error) {
 
             response.statusCode = 404;
-            fs.readFile("index.html", function (error, data) {
-                if (error) {
-                    response.end("Resourse not found!");
-                }
-                response.end(data)
-            })
+            response.end("Resourse not found!");
 
         }
         else {

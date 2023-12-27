@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Рисовалка</title>
+    <meta name="description" content="Рисуйте онлайн бесплатно без СМС и регистрации">
     <link rel="stylesheet" href="paint.css" type="text/css">
 
 </head>
@@ -16,7 +18,7 @@
         </div>
     </div>
     <div class="dropdown">
-        <button class="dropbtn" >Color</button>
+        <button class="dropbtn">Color</button>
         <div class="dropdown-content">
             <a href="#" onclick="pen.color=this.textContent">red</a>
             <a href="#" onclick="pen.color=this.textContent">blue</a>
@@ -25,8 +27,10 @@
     </div>
     <button class="dropbtn" onclick="Clear()">Clear</button>
 </header>
+
 <body>
-<canvas id="drawField" height="600px" width="800px"></canvas>
-<script src="scriptPaint.js"></script>
+    <canvas id="drawField" height="600px" width="800px"></canvas>
+    <script src="scriptPaint.js"></script>
 </body>
+
 </html>
